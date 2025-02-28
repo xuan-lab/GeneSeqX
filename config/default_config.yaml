@@ -1,0 +1,42 @@
+gene_sequence_data:
+  storage:
+    format: 
+      - FASTA
+      - FASTQ
+      - BAM
+      - VCF
+    default_directory: "/path/to/storage"
+  processing:
+    max_threads: 4
+    timeout: 300
+  analysis:
+    enable_statistics: true
+    enable_alignment: true
+    alignment_tool: "BLAST"
+  visualization:
+    default_plot_type: "line"
+    enable_interactive: true
+  data_integration:
+    api_endpoints:
+      - name: "NCBI"
+        url: "https://api.ncbi.nlm.nih.gov/"
+      - name: "Ensembl"
+        url: "https://rest.ensembl.org/"
+  user_permissions:
+    default_role: "viewer"
+    roles:
+      - name: "admin"
+        permissions:
+          - "read"
+          - "write"
+          - "execute"
+      - name: "editor"
+        permissions:
+          - "read"
+          - "write"
+      - name: "viewer"
+        permissions:
+          - "read"
+  security:
+    enable_ssl: true
+    encryption_method: "AES-256"

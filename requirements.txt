@@ -1,0 +1,12 @@
+numpy
+pandas
+biopython
+matplotlib
+seaborn
+scikit-learn
+requests
+pyyaml
+flask
+flask-cors
+pytest
+jupyter
